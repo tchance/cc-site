@@ -55,6 +55,7 @@
   }
 
   /* Trim the clamp-sized masthead to something page-sized */
+  .name-block { padding-top: 0 !important; }
   .name {
     font-size: 64pt !important;
     line-height: 0.9 !important;

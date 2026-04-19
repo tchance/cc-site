@@ -133,19 +133,24 @@
   .boot__line:nth-child(3) { animation-delay: 360ms; }
   .boot__line:nth-child(4) { animation-delay: 540ms; }
 
-  .name-block { opacity: 0; animation: fadeIn 500ms 800ms both; }
+  .name-block {
+    --name-size: clamp(72px, 22vw, 360px);
+    padding-top: calc(var(--name-size) * 0.15); /* headroom for accented caps */
+    opacity: 0;
+    animation: fadeIn 500ms 800ms both;
+  }
   .name {
     font-family: var(--mono);
     font-weight: 700;
-    font-size: clamp(120px, 26vw, 460px);
-    letter-spacing: -0.08em;
+    font-size: var(--name-size);
+    letter-spacing: -0.07em;
     line-height: 0.82;
     color: var(--amber);
     margin: 0;
     text-align: left;
     user-select: all;
     white-space: nowrap;
-    transform: scaleX(1.08);
+    transform: scaleX(1.04);
     transform-origin: left center;
     text-shadow: 0 0 1px var(--amber), 0 0 32px rgba(244,184,96,0.18);
   }
