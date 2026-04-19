@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tyler Chance — Résumé</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Tyler Chance — Résumé. 16 years across product, web dev, and design in news and publishing." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="print.css" media="print">
+<style>
+  :root {
+    --bg:        #0a0907;
+    --bg-raised: #141107;
+    --bg-panel:  #1a1610;
+    --ink:       #e8dfc4;
+    --ink-dim:   #b5a888;
+    --ink-mute:  #8a7a55;
+    --ink-faint: #5a4f36;
+    --ink-ghost: #3a3425;
+    --amber:     #f4b860;
+    --green:     #7fb069;
+    --red:       #d4614a;
+    --violet:    #a88bc8;
+
+    --mono: "JetBrains Mono", "IBM Plex Mono", "Fira Code", ui-monospace, Menlo, monospace;
+
+    --rule-dashed: 1px dashed var(--ink-faint);
+    --rule-dotted: 1px dotted var(--ink-ghost);
+    --rule-solid:  1px solid  var(--ink-faint);
+
+    --motion-standard: 220ms cubic-bezier(0.2,0,0,1);
+
+    --container-max: 1440px;
+    --gutter: 48px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); overscroll-behavior: none; }
+  body {
+    font-family: var(--mono);
+    color: var(--ink);
+    min-height: 100vh;
+    background-image: repeating-linear-gradient(0deg, rgba(244,184,96,0.015) 0 1px, transparent 1px 3px);
+  }
+  ::selection { background: var(--amber); color: var(--bg); }
+  a { transition: color var(--motion-standard); }
+  a:hover { color: var(--amber) !important; }
+
+  @keyframes blink  { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ─── Typography ───────────────────────────────────── */
+  .t-label   { font-size: 10px;   line-height: 1.3;  font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; }
+  .t-micro   { font-size: 11px;   line-height: 1.4;  font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+  .t-small   { font-size: 12.5px; line-height: 1.55; font-weight: 400; }
+  .t-body    { font-size: 14px;   line-height: 1.6;  font-weight: 400; }
+  .t-lede    { font-size: 18px;   line-height: 1.5;  font-weight: 400; }
+  .t-display3{ font-size: 24px;   line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; }
+
+  /* ─── Wire bar ─────────────────────────────────────── */
+  .wire-bar {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--bg);
+    border-bottom: var(--rule-dashed);
+  }
+  .wire-bar__inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 8px var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ink-mute);
+  }
+  .wire-bar__live { color: var(--green); display: inline-flex; align-items: center; gap: 8px; }
+  .wire-bar__dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 1.2s steps(2) infinite; }
+
+  /* ─── Nav ──────────────────────────────────────────── */
+  .nav {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 20px var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--rule-solid);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand { color: var(--amber); text-decoration: none; }
+  .brand__caret {
+    display: inline-block;
+    margin-left: 2px;
+    background: var(--amber);
+    width: 8px; height: 14px;
+    vertical-align: -2px;
+    animation: blink 1s steps(2) infinite;
+  }
+  .nav__links { display: flex; gap: 4px; flex-wrap: wrap; }
+  .nav__link {
+    color: var(--ink-dim);
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    transition: all var(--motion-standard);
+  }
+  .nav__link.is-active {
+    color: var(--amber);
+    border-color: var(--amber);
+  }
+  .nav__link.is-active::before { content: "▸"; margin-right: 6px; }
+
+  main {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  /* ─── About hero ───────────────────────────────────── */
+  .about-hero { padding: 48px 0 0; }
+  .about-hero__label { color: var(--amber); margin-bottom: 20px; }
+  .name-block { opacity: 0; animation: fadeIn 500ms 200ms both; }
+  .name {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(120px, 26vw, 460px);
+    letter-spacing: -0.08em;
+    line-height: 0.82;
+    color: var(--amber);
+    margin: 0;
+    text-align: left;
+    user-select: all;
+    white-space: nowrap;
+    transform: scaleX(1.08);
+    transform-origin: left center;
+    text-shadow: 0 0 1px var(--amber), 0 0 32px rgba(244,184,96,0.18);
+  }
+  .about-hero__meta {
+    border-top: var(--rule-dashed);
+    margin-top: 16px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    opacity: 0;
+    animation: fadeIn 500ms 600ms both;
+  }
+  .about-hero__lede { color: var(--ink); }
+  .about-hero__lede .arrow { color: var(--green); }
+  .about-hero__lede em { font-style: italic; }
+  .about-hero__data { color: var(--ink-mute); text-align: right; line-height: 1.8; }
+  .about-hero__live { color: var(--green); margin-top: 10px; }
+
+  /* ─── Bulletin ─────────────────────────────────────── */
+  .bulletin {
+    border: 1px solid var(--ink-faint);
+    border-left: 3px solid var(--amber);
+    background: var(--bg-panel);
+    padding: 20px 24px;
+    margin-top: 48px;
+  }
+  .bulletin__head {
+    display: flex; justify-content: space-between;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .bulletin__body .line { margin-bottom: 8px; }
+  .bulletin__body .line:last-child { margin-bottom: 0; }
+  .bulletin__body .kicker { color: var(--amber); font-weight: 600; }
+
+  /* ─── Section head ─────────────────────────────────── */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 48px 0 16px;
+    color: var(--amber);
+  }
+  .section-head__title {
+    color: var(--ink);
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .section-head__rule { flex: 1; border-top: var(--rule-dashed); }
+  .section-head__tail { color: var(--ink-mute); }
+
+  /* ─── Expand rows (experience) ─────────────────────── */
+  .expand-list { border-top: var(--rule-dashed); }
+  .expand-row {
+    border-bottom: var(--rule-dotted);
+    padding: 18px 0;
+    display: grid;
+    grid-template-columns: 140px 1fr 60px;
+    gap: 20px;
+    cursor: pointer;
+    transition: background var(--motion-standard);
+  }
+  .expand-row:hover { background: rgba(244,184,96,0.03); }
+  .expand-row[data-interactive="false"] { cursor: default; }
+  .expand-row[data-interactive="false"]:hover { background: transparent; }
+  .expand-row__years {
+    color: var(--amber);
+    padding-top: 6px;
+  }
+  .expand-row__title { color: var(--ink); margin-bottom: 2px; }
+  .expand-row__org   { color: var(--ink-mute); }
+  .expand-row__summary { color: var(--ink-dim); margin-top: 10px; }
+  .expand-row__details {
+    display: none;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: var(--rule-dotted);
+  }
+  .expand-row[data-open="true"] .expand-row__details { display: block; }
+  .expand-row__detail {
+    color: var(--ink);
+    margin-bottom: 8px;
+    display: flex;
+    gap: 10px;
+  }
+  .expand-row__detail:last-child { margin-bottom: 0; }
+  .expand-row__detail .bullet { color: var(--green); flex-shrink: 0; }
+  .expand-row__toggle { text-align: right; padding-top: 4px; }
+  .expand-row__toggle-pill {
+    color: var(--amber);
+    border: 1px solid var(--ink-faint);
+    padding: 2px 8px;
+  }
+  .expand-row[data-open="true"] .expand-row__toggle-pill {
+    color: var(--green);
+    border-color: var(--green);
+  }
+  .expand-row[data-interactive="false"] .expand-row__toggle-pill {
+    color: var(--ink-ghost);
+    border-color: transparent;
+  }
+
+  /* ─── Tags (skills) ────────────────────────────────── */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0 24px;
+  }
+  .tag {
+    border: 1px solid var(--ink-faint);
+    padding: 3px 9px;
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--bg-raised);
+    display: inline-block;
+  }
+  .tag__chev { margin-right: 6px; color: var(--amber); }
+  .tag[data-accent="green"] .tag__chev  { color: var(--green); }
+  .tag[data-accent="violet"] .tag__chev { color: var(--violet); }
+
+  /* ─── Education ────────────────────────────────────── */
+  .education {
+    border: 1px solid var(--ink-faint);
+    padding: 24px 28px;
+    background: var(--bg-raised);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .education__school { color: var(--ink); margin-bottom: 4px; }
+  .education__degree { color: var(--ink-dim); }
+  .education__loc    { color: var(--ink-mute); }
+
+  /* ─── Contact ──────────────────────────────────────── */
+  .contact { padding: 8px 0 16px; }
+  .contact__prompt { margin: 4px 0; color: var(--ink); }
+  .contact__prompt-sym { color: var(--green); user-select: none; margin-right: 4px; }
+  .contact__out {
+    color: var(--ink-dim);
+    padding-left: 16px;
+    margin: 2px 0;
+  }
+  .contact__out[data-color="green"] { color: var(--green); }
+  .contact__out-arrow { color: var(--ink-faint); margin-right: 8px; }
+  .contact__cta-row { margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .contact__btn {
+    padding: 12px 20px;
+    border: 1px solid var(--ink-faint);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .contact__btn--primary { border-color: var(--amber); color: var(--amber); }
+
+  /* ─── Footer ───────────────────────────────────────── */
+  footer {
+    max-width: var(--container-max);
+    margin: 120px auto 0;
+    padding: 24px var(--gutter) 40px;
+    border-top: var(--rule-dashed);
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-mute);
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  footer .cursor { color: var(--green); }
+
+  /* ─── Responsive ───────────────────────────────────── */
+  @media (max-width: 900px) {
+    :root { --gutter: 24px; }
+    .about-hero__meta { grid-template-columns: 1fr; }
+    .about-hero__data { text-align: left; }
+    .expand-row { grid-template-columns: 100px 1fr 44px; gap: 12px; }
+    .education  { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .wire-bar__inner { gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .name-block,
+    .about-hero__meta { opacity: 1; animation: none; }
+    .wire-bar__dot,
+    .brand__caret { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── Wire ticker bar ────────────────────────────── -->
+<div class="wire-bar">
+  <div class="wire-bar__inner t-label">
+    <span class="wire-bar__live"><span class="wire-bar__dot"></span>LIVE</span>
+    <span>SYNC <span id="sync-clock">00:00:00</span> EDT</span>
+    <span id="sync-date">04/19/2026</span>
+  </div>
+</div>
+
+<!-- ─── Nav ────────────────────────────────────────── -->
+<nav class="nav">
+  <a class="brand t-micro" href="index.html">$ tyler_chance<span class="brand__caret"></span></a>
+  <div class="nav__links">
+    <a class="nav__link t-micro" href="index.html">[1] HOME</a>
+    <a class="nav__link t-micro is-active" href="about.html">[2] RÉSUMÉ</a>
+    <a class="nav__link t-micro" href="system.html">[3] SYSTEM</a>
+    <a class="nav__link t-micro" href="https://www.linkedin.com/in/tylerscottchance/">LINKEDIN ↗</a>
+    <a class="nav__link t-micro" href="https://twitter.com/tchance121">TWITTER ↗</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ─── About hero ───────────────────────────────── -->
+  <section class="about-hero">
+    <div class="about-hero__label t-label">▸ FILE: RESUME.LOG  ·  16 YEARS  ·  7 ROLES</div>
+
+    <div class="name-block">
+      <div class="name">RÉSUMÉ</div>
+    </div>
+
+    <div class="about-hero__meta">
+      <div class="about-hero__lede t-display3">
+        <span class="arrow">&gt;</span>
+        A journalism degree, a stint in newsrooms, some years designing pages and <em>&nbsp;many&nbsp;</em> years translating between editors and engineers. Here's the log.
+      </div>
+      <div class="about-hero__data t-label">
+        <div>OWNER: tyler_chance</div>
+        <div>ENCODING: UTF-8</div>
+        <div>ROWS: <span id="row-count">7</span></div>
+        <div class="about-hero__live">● LIVE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TL;DR bulletin ──────────────────────────── -->
+  <div class="bulletin">
+    <div class="bulletin__head t-label">
+      <span>▸ TL;DR · SPEED-DATING VERSION</span>
+    </div>
+    <div class="bulletin__body t-body">
+      <div class="line"><span class="kicker">PRODUCT.</span> Led several teams, launched &amp; scaled products, managed PMs. Purveyor of empathy at every step.</div>
+      <div class="line"><span class="kicker">WEB DEV.</span> Freelance for years; still building internal tools to solve problems for those around me.</div>
+      <div class="line"><span class="kicker">DESIGN.</span> Designed (and sometimes coded) for the news industry across print and digital.</div>
+    </div>
+  </div>
+
+  <!-- ─── §01 Experience ──────────────────────────── -->
+  <div class="section-head t-micro">
+    <span class="t-label">[ §01 ]</span>
+    <span class="section-head__title">EXPERIENCE / REVERSE CHRONO</span>
+    <div class="section-head__rule"></div>
+    <span class="section-head__tail t-label"><span id="exp-count">n=7</span></span>
+  </div>
+  <div class="expand-list" id="expand-list"></div>
+
+  <!-- ─── §02 Skills ──────────────────────────────── -->
+  <div class="section-head t-micro">
+    <span class="t-label">[ §02 ]</span>
+    <span class="section-head__title">SKILLS / GREP</span>
+    <div class="section-head__rule"></div>
+    <span class="section-head__tail t-label"><span id="skill-count">n=0</span></span>
+  </div>
+  <div class="tags" id="skills"></div>
+
+  <!-- ─── §03 Education ───────────────────────────── -->
+  <div class="section-head t-micro">
+    <span class="t-label">[ §03 ]</span>
+    <span class="section-head__title">EDUCATION</span>
+    <div class="section-head__rule"></div>
+  </div>
+  <div class="education">
+    <div>
+      <div class="education__school t-display3">Indiana University School of Journalism</div>
+      <div class="education__degree t-small">Bachelor of Arts, Journalism</div>
+    </div>
+    <div class="education__loc t-label">📍 Indianapolis, Ind.</div>
+  </div>
+
+  <!-- ─── §04 Contact ─────────────────────────────── -->
+  <div class="section-head t-micro">
+    <span class="t-label">[ §04 ]</span>
+    <span class="section-head__title">CONTACT</span>
+    <div class="section-head__rule"></div>
+    <span class="section-head__tail t-label">/finger</span>
+  </div>
+  <div class="contact t-body">
+    <div class="contact__prompt"><span class="contact__prompt-sym">$</span>finger tyler@tylerchance.info</div>
+    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Login: tyler_chance</div>
+    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Name: Tyler Scott Chance</div>
+    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Location: Jersey City, NJ</div>
+    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Current: VP, Product @ Hearst Magazines</div>
+    <div class="contact__out" data-color="green"><span class="contact__out-arrow">&gt;</span>Status: ● open to connect with collaborators, advisors, board roles</div>
+    <div class="contact__cta-row">
+      <a class="contact__btn contact__btn--primary t-micro" href="https://www.linkedin.com/in/tylerscottchance/">▸ LINKEDIN ↗</a>
+      <a class="contact__btn t-micro" href="https://twitter.com/tchance121">▸ TWITTER @tchance121 ↗</a>
+    </div>
+  </div>
+</main>
+
+<footer class="t-label">
+  <span>[EOF]</span>
+  <span>© MMXXVI · TYLERCHANCE.INFO</span>
+  <span>SET IN JETBRAINS MONO</span>
+  <span class="cursor">█</span>
+</footer>
+
+<script>
+  // ── Data ────────────────────────────────────────────────────────
+  const resume = [
+    {
+      years: "2021–Present",
+      title: "VP, Product",
+      org: "Hearst Magazines",
+      summary: "Oversaw product team structure and strategy across three org restructures, leading teams at both horizontal (discipline) and vertical (vertical) levels.",
+      details: [
+        "2025–now: VP, Site Experience — leading teams across all Hearst Magazines brands for SEO, audience development, content experience and navigation/wayfinding.",
+        "Launched AI-powered article summarization and text-to-speech across the Hearst Magazines portfolio.",
+        "Building an agentic workflow on top of our internal design system so product and editorial teams can spin up branded pages and features without a front-end hand-off.",
+        "Coded an internal analytics dashboard that pulls from the GitHub, Looker and our internal APIs to tie feature launches to audience impact — so we can see which shipped work actually moved the numbers.",
+        "2023–2025: VP, Enthusiast & Wellness — ran product for the E&W brand vertical. Launched a new Masterclass template, new paywall experiences, and the platform features powering Oprah's Favorite Things.",
+        "2021–2023: VP, Core — ran the Core disciplinary track with Directors and PMs across Content (replatformed the front-end for all Hearst US Magazines sites), Storytelling, CMS (new platform initiative), Search (replatformed to in-house Elasticsearch), and Video (relaunched in-house player).",
+      ],
+    },
+    {
+      years: "2018–2021",
+      title: "Product Director",
+      org: "The Wall Street Journal",
+      summary: "Ran the full product lifecycle for WSJ's suite of editorial tools and underlying services — strategy, discovery, ownership, and stakeholder relations across the newsroom and parent companies.",
+      details: [
+        "Led discovery, development and global launch of a new content planning and workflow platform — first sprint to MVP in 4 months, global launch by year-end, unifying workflows previously split across several apps.",
+        "Served as WSJ product stakeholder for consumer search — coordinating Dow Jones data teams, newsroom stakeholders, structured-data enhancements, related-article recommendations, and business requirements during a back-end service migration.",
+        "Shepherded new additions to the WSJ corpus for search, including interactive graphics and user-focused features like searching on a story's print headline.",
+        "Partnered with Amazon to bring a WSJ internal tool to the public for the 2020 Election — used custom taxonomies and NLP to turn millions of transcripts into a searchable database.",
+        "Wrote business-logic requirements for internal tools sitting behind Elasticsearch APIs; built Kibana dashboards; stood up new ways of measuring internal processes.",
+        "Product Owner for WSJ Newsletters; shepherded the portfolio through a vendor migration.",
+        "Recruited and helped establish the first Program Management function for internal editorial publishing systems.",
+        "Kicked off a design system to standardize UX and speed up tool construction across every team.",
+      ],
+    },
+    {
+      years: "2016–2018",
+      title: "Product Manager",
+      org: "The Wall Street Journal",
+      summary: "First-ever PM for internal editorial tools at WSJ and Dow Jones — working across three legacy engineering teams to rebuild and roll out tools and features in partnership with WSJ consumer product.",
+      details: [
+        "Reinvented and rolled out tools for multimedia search, image cropping, charting across all platforms, live coverage, and content planning.",
+        "Ran the Journal's partnership with the Guardian's Mobile Innovation Lab on live-coverage features.",
+        "Speaker — SRCCON 2017: \"Sure, You're Making Tools, But Do People Use Them?\" — on building empathy between newsroom product teams and their users.",
+      ],
+    },
+    {
+      years: "2014–2016",
+      title: "Art Director",
+      org: "The Wall Street Journal",
+      summary: "Page design and illustration commissioning for print sections. Built an editorial tool in HTML/CSS/JS with a custom API.",
+      details: [
+        "Served on the prizes committee; built and compiled submission series.",
+        "Designed entry and e-book for 2015 Pulitzer Prize winner in Investigative Reporting, \"Medicare Unmasked.\"",
+      ],
+    },
+    {
+      years: "2013–2014",
+      title: "Designer",
+      org: "Gannett Design Studio",
+      summary: "Designed A1/News sections for 13 newspapers; built HTML/CSS/JS apps for iPad-only features for the Indianapolis Star.",
+      details: [
+        "Built web tools in HTML/CSS/JS/PHP to scrape APIs and generate URLs for Adobe Digital Publishing Suite.",
+        "Animated front pages and infographics with After Effects.",
+        "Designed, developed and served as webmaster for the Society of News Design's 2013 conference.",
+      ],
+    },
+    {
+      years: "2011–2012",
+      title: "Professor",
+      org: "IU School of Journalism",
+      summary: "Teaching: Computer Methods in Journalism; Reporting, Writing & Editing I & II.",
+      details: [],
+    },
+    {
+      years: "2010–2011",
+      title: "Copy Editor / Designer",
+      org: "Journal & Courier, Lafayette, Ind.",
+      summary: "Edited copy and laid out daily editions (Local, Wires, A1).",
+      details: [
+        "Trained staff on SEO practices.",
+        "Helped assemble social media strategy across Facebook and Twitter.",
+        "Posting content to the web daily.",
+      ],
+    },
+  ];
+
+  const skills = [
+    "Product Management", "Product Strategy", "Product Vision",
+    "OKRs", "Roadmapping", "Stakeholder Management",
+    "Team Leadership", "Org Design",
+    "Agile", "Scrum", "Kanban",
+    "Continuous Discovery", "Impact Mapping", "User Research",
+    "A/B Testing", "Experimentation",
+    "GA4", "Adobe Analytics", "Looker", "Looker Studio",
+    "Optimizely", "SQL",
+    "CMS Architecture", "Headless CMS", "Content Modeling",
+    "Taxonomies", "SEO", "Audience Development",
+    "Elasticsearch", "Design Systems",
+    "LLM product integration", "AI-assisted prototyping",
+    "Claude Code", "Agentic workflows", "Prompt engineering",
+    "JavaScript", "TypeScript", "Node.js", "React",
+    "HTML", "CSS", "Tailwind", "Full-stack development",
+    "REST & GraphQL APIs",
+    "Figma",
+    "WordPress",
+  ];
+
+  // ── Counts ──────────────────────────────────────────────────────
+  document.getElementById("row-count").textContent   = resume.length;
+  document.getElementById("exp-count").textContent   = `n=${resume.length}`;
+  document.getElementById("skill-count").textContent = `n=${skills.length}`;
+
+  // ── Live sync clock (America/New_York) ──────────────────────────
+  function updateClock() {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      hour12: false,
+      hour: "2-digit", minute: "2-digit", second: "2-digit",
+      year: "numeric", month: "2-digit", day: "2-digit",
+    }).formatToParts(new Date()).reduce((acc, p) => (acc[p.type] = p.value, acc), {});
+    const hh = parts.hour === "24" ? "00" : parts.hour;
+    document.getElementById("sync-clock").textContent = `${hh}:${parts.minute}:${parts.second}`;
+    document.getElementById("sync-date").textContent  = `${parts.month}/${parts.day}/${parts.year}`;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // ── Expand rows ─────────────────────────────────────────────────
+  function escapeHtml(s) {
+    return String(s)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  const list = document.getElementById("expand-list");
+  list.innerHTML = resume.map((r, i) => {
+    const has = r.details && r.details.length > 0;
+    const open = i === 0 && has;
+    const toggleLabel = has ? (open ? "[−]" : "[+]") : "[·]";
+    const detailsHtml = has
+      ? `<div class="expand-row__details t-small">
+           ${r.details.map(d => `
+             <div class="expand-row__detail">
+               <span class="bullet">▸</span>
+               <span>${escapeHtml(d)}</span>
+             </div>`).join("")}
+         </div>`
+      : "";
+    return `
+      <div class="expand-row"
+           data-interactive="${has ? "true" : "false"}"
+           data-open="${open ? "true" : "false"}">
+        <div class="expand-row__years t-label">${escapeHtml(r.years)}</div>
+        <div class="expand-row__main">
+          <div class="expand-row__title t-display3">${escapeHtml(r.title)}</div>
+          <div class="expand-row__org t-micro">@ ${escapeHtml(r.org)}</div>
+          <div class="expand-row__summary t-small">${escapeHtml(r.summary)}</div>
+          ${detailsHtml}
+        </div>
+        <div class="expand-row__toggle">
+          <span class="expand-row__toggle-pill t-label">${toggleLabel}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  list.addEventListener("click", (e) => {
+    const row = e.target.closest(".expand-row");
+    if (!row || row.dataset.interactive !== "true") return;
+    const open = row.dataset.open === "true";
+    row.dataset.open = open ? "false" : "true";
+    row.querySelector(".expand-row__toggle-pill").textContent = open ? "[+]" : "[−]";
+  });
+
+  // ── Skills ──────────────────────────────────────────────────────
+  document.getElementById("skills").innerHTML = skills.map((sk, i) => {
+    const accent = i % 7 === 0 ? "green" : i % 5 === 0 ? "violet" : "amber";
+    return `<span class="tag" data-accent="${accent}"><span class="tag__chev">›</span>${escapeHtml(sk)}</span>`;
+  }).join("");
+</script>
+
+</body>
+</html>

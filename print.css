@@ -1,0 +1,143 @@
+/* =========================================================================
+   TYLERCHANCE.INFO · Print stylesheet
+   -------------------------------------------------------------------------
+   The site's dark-amber identity is on-screen only. In print we want black
+   type on white — readable, cheap to print, survives stapling.
+
+   Strategy:
+     1. Force white page + black ink. Kill backgrounds, shadows, animations.
+     2. Hide pure chrome: wire bar, nav, footer, marquee, boot prompt,
+        corner coords, blinking cursors.
+     3. Shrink the giant masthead so it fits the page.
+     4. Reveal all collapsed résumé rows — no JS hook needed.
+     5. Print URLs after external links so paper readers can still follow.
+     6. US-Letter geometry with sensible type sizes & page-break hints.
+   ========================================================================= */
+
+@media print {
+
+  /* ── Page geometry ────────────────────────────────────────────────────── */
+  @page {
+    size: Letter;
+    margin: 0.6in 0.65in 0.7in 0.65in;
+  }
+
+  /* ── Global reset: white paper, black ink ─────────────────────────────── */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body, body *,
+  body *::before, body *::after {
+    color: #000 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-mask-image: none !important;
+            mask-image: none !important;
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    border-color: #bbb !important;
+  }
+
+  /* ── Base typography ──────────────────────────────────────────────────── */
+  body {
+    font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+
+  /* Trim the clamp-sized masthead to something page-sized */
+  .name {
+    font-size: 64pt !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.06em !important;
+    transform: none !important;
+    margin-bottom: 8pt !important;
+  }
+
+  /* Scale down the rest of the type ramp */
+  .t-display3 { font-size: 13pt !important; line-height: 1.3 !important; }
+  .t-lede     { font-size: 11pt !important; line-height: 1.4 !important; }
+  .t-body     { font-size: 10.5pt !important; }
+  .t-small    { font-size: 9.5pt  !important; }
+  .t-micro    { font-size: 8.5pt  !important; letter-spacing: 0.08em !important; }
+  .t-label    { font-size: 8pt    !important; letter-spacing: 0.14em !important; }
+
+  /* ── Hide chrome, motion, and pure decoration ─────────────────────────── */
+  .wire-bar,
+  .nav,
+  footer,
+  .ticker,
+  .boot,
+  .coords,
+  .brand__caret,
+  .tagline__caret,
+  .wire-bar__dot,
+  .expand-row__toggle {
+    display: none !important;
+  }
+
+  /* Tagline row collapses once the coords column is gone */
+  .tagline-row,
+  .about-hero__meta {
+    display: block !important;
+    border-top: 1pt solid #000 !important;
+    padding-top: 10pt !important;
+    margin: 0 0 16pt !important;
+  }
+
+  /* ── Reveal every collapsed résumé row ────────────────────────────────── */
+  .expand-row__details { display: block !important; }
+
+  /* ── Links: underlined, with URL printed after external hrefs ─────────── */
+  a { text-decoration: underline !important; }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #555 !important;
+    font-weight: normal;
+    word-break: break-all;
+  }
+
+  /* ── Page-break hints ─────────────────────────────────────────────────── */
+  .expand-row,
+  .axiom,
+  .dispatch,
+  .bulletin,
+  .education {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .section-head,
+  .about-hero__label {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* ── Containers: kill gutters and caps ────────────────────────────────── */
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Tighten vertical rhythm that looks right on screen but wastes paper */
+  section { padding: 8pt 0 !important; margin: 0 !important; }
+  .section-head { padding: 12pt 0 4pt !important; }
+  .hero { padding: 0 !important; }
+
+  /* ── Structural rules look cleaner in ink black ───────────────────────── */
+  .section-head__rule,
+  .bulletin,
+  .education {
+    border-color: #000 !important;
+  }
+}
