@@ -474,15 +474,14 @@
 
   // ── Dispatches ──────────────────────────────────────────────────
   document.getElementById("dispatches").innerHTML = highlights.map((h, i) => `
-    <a class="dispatch" href="#">
+    <div class="dispatch">
       <div class="dispatch__meta t-label">
         <span>DISPATCH · ${String(i + 1).padStart(3, "0")}</span>
         <span class="muted">FILED · 2020—2025</span>
       </div>
       <div class="dispatch__title t-display3">${h.title}</div>
       <div class="dispatch__body t-small">${h.body}</div>
-      <div class="dispatch__more t-label">READ FULL ▸</div>
-    </a>
+    </div>
   `).join("");
 
   // ── Axioms ──────────────────────────────────────────────────────
