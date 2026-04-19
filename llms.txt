@@ -1,0 +1,33 @@
+# Tyler Chance
+
+> Tyler Chance is Vice President of Product at Hearst Magazines in Jersey City, NJ. He is a product leader and systems thinker who builds software for content creators and publishers, increasingly with and around AI. 16 years across product, web development, and design in news and publishing.
+
+## Identity
+
+- Full name: Tyler Scott Chance
+- Current role: Vice President of Product, Hearst Magazines
+- Previous notable role: Product Director, The Wall Street Journal (2018–2021)
+- Education: Bachelor of Arts in Journalism, Indiana University School of Journalism
+- Location: Jersey City, New Jersey, United States
+- Open to: collaborators, advisors, and board roles
+
+## Pages
+
+- [Home](https://www.tylerchance.info/): Short bio, selected work dispatches, product beliefs, and contact links.
+- [Résumé](https://www.tylerchance.info/about): Full work history (2010–present), skills, education, and contact.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/tylerscottchance/
+- Twitter / X: https://twitter.com/tchance121
+
+## Selected work
+
+- AI in the newsroom: Launched article summarization and text-to-speech across Hearst Magazines; building an agentic workflow on top of the internal design system so editorial and product teams can ship branded experiences without a front-end hand-off.
+- Real-time planning & collaboration: Launched a new in-house content planning platform for The Wall Street Journal, unifying several app-silo'd workflows across a global newsroom — first sprint to global launch inside a year.
+- Shipping meets audience: Coded an internal dashboard at Hearst that pulls from GitHub, Looker, and Hearst's own APIs to tie feature launches to audience impact.
+- Search & structured data: Led WSJ.com search work on tagging, metadata and structured data; partnered with Amazon to bring a WSJ internal tool to the public for the 2020 US Election using custom taxonomies and NLP over millions of transcripts.
+
+## Areas of expertise
+
+Product management and strategy; team leadership and org design; agile/scrum/kanban; continuous discovery and user research; A/B testing and experimentation; analytics (Google Analytics, Adobe Analytics, Looker, SQL); content management systems (headless CMS, content modeling, taxonomies); SEO and audience development; Elasticsearch; design systems; generative AI product integration, agentic workflows, and prompt engineering; full-stack web development (JavaScript, TypeScript, Node.js, React, HTML, CSS, REST and GraphQL APIs); Figma.

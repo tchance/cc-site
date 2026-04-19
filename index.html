@@ -2,13 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Tyler Chance — VP of Product</title>
+<title>Tyler Chance — VP of Product, Hearst Magazines</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Tyler Chance — VP of Product at Hearst Magazines. Product leader and systems thinker building software for content creators and publishers." />
+<meta name="description" content="Tyler Chance is VP of Product at Hearst Magazines in Jersey City, NJ — a product leader and systems thinker building software for content creators and publishers, increasingly with and around AI." />
+<meta name="author" content="Tyler Chance" />
+<meta name="theme-color" content="#0a0907" />
+
+<link rel="canonical" href="https://www.tylerchance.info/" />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Tyler Chance" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Tyler Chance — VP of Product, Hearst Magazines" />
+<meta property="og:description" content="Product leader and systems thinker building software for content creators and publishers — increasingly with and around AI." />
+<meta property="og:url" content="https://www.tylerchance.info/" />
+<meta property="og:locale" content="en_US" />
+<meta property="profile:first_name" content="Tyler" />
+<meta property="profile:last_name" content="Chance" />
+<meta property="profile:username" content="tchance121" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@tchance121" />
+<meta name="twitter:creator" content="@tchance121" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="print.css" media="print">
+
+<!-- Structured data: Person schema for search engines & LLMs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.tylerchance.info/#person",
+  "name": "Tyler Chance",
+  "givenName": "Tyler",
+  "familyName": "Chance",
+  "alternateName": "Tyler Scott Chance",
+  "url": "https://www.tylerchance.info/",
+  "jobTitle": "Vice President of Product",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Hearst Magazines",
+    "url": "https://www.hearst.com/magazines"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jersey City",
+    "addressRegion": "NJ",
+    "addressCountry": "US"
+  },
+  "description": "Product leader and systems thinker building software for content creators and publishers, increasingly with and around AI.",
+  "sameAs": [
+    "https://www.linkedin.com/in/tylerscottchance/",
+    "https://twitter.com/tchance121"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indiana University School of Journalism"
+  },
+  "knowsAbout": [
+    "Product Management",
+    "Product Strategy",
+    "Publishing Technology",
+    "Content Management Systems",
+    "Design Systems",
+    "Generative AI",
+    "Editorial Tools",
+    "Search Engine Optimization",
+    "Audience Development"
+  ]
+}
+</script>
+
 <style>
   :root {
     --bg:        #0a0907;
@@ -48,6 +116,22 @@
   ::selection { background: var(--amber); color: var(--bg); }
   a { transition: color var(--motion-standard); }
   a:hover { color: var(--amber) !important; }
+
+  /* Neutralize default heading/p/list styles — we style via utility classes. */
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; margin: 0; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+
+  /* Screen-reader-only text — indexed by search engines & LLMs, hidden visually. */
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
 
   @keyframes blink     { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
   @keyframes fadeIn    { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
@@ -330,8 +414,8 @@
 </head>
 <body>
 
-<!-- ─── Wire ticker bar ────────────────────────────── -->
-<div class="wire-bar">
+<!-- Wire bar — decorative live clock, hidden from assistive tech & crawlers -->
+<div class="wire-bar" aria-hidden="true">
   <div class="wire-bar__inner t-label">
     <span class="wire-bar__live"><span class="wire-bar__dot"></span>LIVE</span>
     <span>SYNC <span id="sync-clock">00:00:00</span> EDT</span>
@@ -339,41 +423,41 @@
   </div>
 </div>
 
-<!-- ─── Nav ────────────────────────────────────────── -->
-<nav class="nav">
-  <a class="brand t-micro" href="index.html">$ tyler_chance<span class="brand__caret"></span></a>
+<nav class="nav" aria-label="Primary">
+  <a class="brand t-micro" href="/">$ tyler_chance<span class="brand__caret" aria-hidden="true"></span></a>
   <div class="nav__links">
-    <a class="nav__link t-micro is-active" href="index.html">[1] HOME</a>
-    <a class="nav__link t-micro" href="about.html">[2] RÉSUMÉ</a>
-    <a class="nav__link t-micro" href="https://www.linkedin.com/in/tylerscottchance/">LINKEDIN ↗</a>
-    <a class="nav__link t-micro" href="https://twitter.com/tchance121">TWITTER ↗</a>
+    <a class="nav__link t-micro is-active" href="/" aria-current="page">[1] HOME</a>
+    <a class="nav__link t-micro" href="/about">[2] RÉSUMÉ</a>
+    <a class="nav__link t-micro" href="https://www.linkedin.com/in/tylerscottchance/" rel="me">LINKEDIN ↗</a>
+    <a class="nav__link t-micro" href="https://twitter.com/tchance121" rel="me">TWITTER ↗</a>
   </div>
 </nav>
 
 <main>
 
   <!-- ─── Mega hero ───────────────────────────────── -->
-  <section class="hero">
-    <div class="boot t-small">
+  <section class="hero" aria-labelledby="hero-name">
+    <div class="boot t-small" aria-hidden="true">
       <div class="boot__line boot__line--cmd">$ login --user=guest</div>
       <div class="boot__line boot__line--out">&gt; authenticating...</div>
       <div class="boot__line boot__line--out">&gt; welcome to TYLERCHANCE.INFO v3.1</div>
       <div class="boot__line boot__line--out">&gt; initializing masthead...</div>
     </div>
 
-    <div class="name-block">
-      <div class="name">TYLER</div>
-      <div class="name">CHANCE</div>
-    </div>
+    <h1 class="name-block" id="hero-name">
+      <span class="name">TYLER</span>
+      <span class="name">CHANCE</span>
+      <span class="visually-hidden"> — Vice President of Product at Hearst Magazines</span>
+    </h1>
 
     <div class="tagline-row">
-      <div class="tagline t-display3">
-        <span class="tagline__arrow">&gt;</span>
+      <p class="tagline t-display3">
+        <span class="tagline__arrow" aria-hidden="true">&gt;</span>
         VP, Product @ Hearst Magazines. An empathy-driven systems thinker
         building software for content creators and publishers.
-        <span class="tagline__caret"></span>
-      </div>
-      <div class="coords t-label">
+        <span class="tagline__caret" aria-hidden="true"></span>
+      </p>
+      <div class="coords t-label" aria-hidden="true">
         <div>LAT: 40.7178° N</div>
         <div>LON: 74.0431° W</div>
         <div>JERSEY CITY · NJ</div>
@@ -382,121 +466,137 @@
     </div>
 
     <div class="ticker t-small" aria-hidden="true">
-      <div class="ticker__track" id="ticker-track"></div>
+      <div class="ticker__track">
+        <!-- 3 beliefs × 2 copies for a seamless CSS loop -->
+        <span class="ticker__item"><span class="ticker__bullet">●</span><span class="ticker__kicker">Building to empower</span><span class="ticker__dash">—</span><span>I believe that happy makers make better. Everything I launch, I launch to make their lives better and make it easier to share their creative voice.</span><span class="ticker__pipe">|</span></span>
+        <span class="ticker__item"><span class="ticker__bullet">●</span><span class="ticker__kicker">Bringing teams together</span><span class="ticker__dash">—</span><span>I think swarming together beats hand-offs and silos. I love bringing disparate units of a business together to find harmony and efficiency in the ways they work.</span><span class="ticker__pipe">|</span></span>
+        <span class="ticker__item"><span class="ticker__bullet">●</span><span class="ticker__kicker">Cleaning up clutter</span><span class="ticker__dash">—</span><span>Efficiency soothes my soul. Few things make me feel better than launching something that cuts out extra work, both for a user and for the back-end.</span><span class="ticker__pipe">|</span></span>
+        <span class="ticker__item"><span class="ticker__bullet">●</span><span class="ticker__kicker">Building to empower</span><span class="ticker__dash">—</span><span>I believe that happy makers make better. Everything I launch, I launch to make their lives better and make it easier to share their creative voice.</span><span class="ticker__pipe">|</span></span>
+        <span class="ticker__item"><span class="ticker__bullet">●</span><span class="ticker__kicker">Bringing teams together</span><span class="ticker__dash">—</span><span>I think swarming together beats hand-offs and silos. I love bringing disparate units of a business together to find harmony and efficiency in the ways they work.</span><span class="ticker__pipe">|</span></span>
+        <span class="ticker__item"><span class="ticker__bullet">●</span><span class="ticker__kicker">Cleaning up clutter</span><span class="ticker__dash">—</span><span>Efficiency soothes my soul. Few things make me feel better than launching something that cuts out extra work, both for a user and for the back-end.</span><span class="ticker__pipe">|</span></span>
+      </div>
     </div>
   </section>
 
   <!-- ─── §01 Dispatches (selected work) ──────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §01 ]</span>
-    <span class="section-head__title">DISPATCHES · SELECTED WORK</span>
-    <div class="section-head__rule"></div>
-    <span class="section-head__tail t-label">n=4</span>
-  </div>
+  <section aria-labelledby="dispatches-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §01 ]</span>
+      <h2 class="section-head__title" id="dispatches-heading">Dispatches · Selected Work</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
+      <span class="section-head__tail t-label">n=4</span>
+    </div>
 
-  <div class="grid-2" id="dispatches"></div>
+    <div class="grid-2">
+      <article class="dispatch">
+        <div class="dispatch__meta t-label">
+          <span>DISPATCH · 001</span>
+          <span class="muted">FILED · 2020—2025</span>
+        </div>
+        <h3 class="dispatch__title t-display3">AI in the newsroom</h3>
+        <p class="dispatch__body t-small">Launched article summarization and text-to-speech across Hearst Magazines, and am building an agentic workflow on top of our internal design system so editorial and product teams can ship branded experiences without a front-end hand-off.</p>
+      </article>
+      <article class="dispatch">
+        <div class="dispatch__meta t-label">
+          <span>DISPATCH · 002</span>
+          <span class="muted">FILED · 2020—2025</span>
+        </div>
+        <h3 class="dispatch__title t-display3">Real-time planning &amp; collaboration</h3>
+        <p class="dispatch__body t-small">Launched a new in-house content planning platform for The Wall Street Journal, uniting several app-silo'd workflows across a global newsroom into a single real-time tool — first sprint to global launch inside a year.</p>
+      </article>
+      <article class="dispatch">
+        <div class="dispatch__meta t-label">
+          <span>DISPATCH · 003</span>
+          <span class="muted">FILED · 2020—2025</span>
+        </div>
+        <h3 class="dispatch__title t-display3">Shipping meets audience</h3>
+        <p class="dispatch__body t-small">Coded an internal dashboard at Hearst pulling from GitHub, Looker and our own APIs to tie specific feature launches to audience impact — so product and editorial can see, together, which shipped work actually moved the numbers.</p>
+      </article>
+      <article class="dispatch">
+        <div class="dispatch__meta t-label">
+          <span>DISPATCH · 004</span>
+          <span class="muted">FILED · 2020—2025</span>
+        </div>
+        <h3 class="dispatch__title t-display3">Search &amp; structured data</h3>
+        <p class="dispatch__body t-small">Led front-line work on tagging, metadata and structured data for WSJ.com search — and a partnership with Amazon to bring a WSJ internal tool to the public for the 2020 Election, using custom taxonomies and NLP to turn millions of transcripts into a searchable database.</p>
+      </article>
+    </div>
+  </section>
 
   <!-- ─── §02 Axioms (beliefs) ────────────────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §02 ]</span>
-    <span class="section-head__title">AXIOMS · WHAT I BELIEVE</span>
-    <div class="section-head__rule"></div>
-    <span class="section-head__tail t-label">n=3</span>
-  </div>
+  <section aria-labelledby="axioms-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §02 ]</span>
+      <h2 class="section-head__title" id="axioms-heading">Axioms · What I Believe</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
+      <span class="section-head__tail t-label">n=3</span>
+    </div>
 
-  <div class="grid-3" id="axioms"></div>
+    <div class="grid-3">
+      <article class="axiom">
+        <div class="axiom__num t-label" aria-hidden="true">// axiom.01</div>
+        <h3 class="axiom__kicker t-display3">Building to empower.</h3>
+        <p class="axiom__body t-small">I believe that happy makers make better. Everything I launch, I launch to make their lives better and make it easier to share their creative voice.</p>
+      </article>
+      <article class="axiom">
+        <div class="axiom__num t-label" aria-hidden="true">// axiom.02</div>
+        <h3 class="axiom__kicker t-display3">Bringing teams together.</h3>
+        <p class="axiom__body t-small">I think swarming together beats hand-offs and silos. I love bringing disparate units of a business together to find harmony and efficiency in the ways they work.</p>
+      </article>
+      <article class="axiom">
+        <div class="axiom__num t-label" aria-hidden="true">// axiom.03</div>
+        <h3 class="axiom__kicker t-display3">Cleaning up clutter.</h3>
+        <p class="axiom__body t-small">Efficiency soothes my soul. Few things make me feel better than launching something that cuts out extra work, both for a user and for the back-end.</p>
+      </article>
+    </div>
+  </section>
 
   <!-- ─── §03 End of feed (CTA) ───────────────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §03 ]</span>
-    <span class="section-head__title">END OF FEED</span>
-    <div class="section-head__rule"></div>
-    <span class="section-head__tail t-label">/home</span>
-  </div>
+  <section aria-labelledby="eof-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §03 ]</span>
+      <h2 class="section-head__title" id="eof-heading">End of Feed</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
+      <span class="section-head__tail t-label">/home</span>
+    </div>
 
-  <div class="cta t-lede">
-    <div class="cta__prompt">
-      <span class="cta__prompt-sym">$</span> cat /about &gt; stdout &nbsp;<span class="cta__prompt-note">// read the full résumé</span>
+    <div class="cta t-lede">
+      <p class="cta__prompt">
+        <span class="cta__prompt-sym" aria-hidden="true">$</span> cat /about &gt; stdout &nbsp;<span class="cta__prompt-note">// read the full résumé</span>
+      </p>
+      <div class="cta__row">
+        <a class="cta__btn cta__btn--primary t-micro" href="/about">▸ /ABOUT &mdash; THE FULL RÉSUMÉ</a>
+        <a class="cta__btn t-micro" href="https://www.linkedin.com/in/tylerscottchance/" rel="me">▸ LINKEDIN ↗</a>
+        <a class="cta__btn t-micro" href="https://twitter.com/tchance121" rel="me">▸ TWITTER @tchance121 ↗</a>
+      </div>
     </div>
-    <div class="cta__row">
-      <a class="cta__btn cta__btn--primary t-micro" href="about.html">▸ /ABOUT &mdash; THE FULL RÉSUMÉ</a>
-      <a class="cta__btn t-micro" href="https://www.linkedin.com/in/tylerscottchance/">▸ LINKEDIN ↗</a>
-      <a class="cta__btn t-micro" href="https://twitter.com/tchance121">▸ TWITTER @tchance121 ↗</a>
-    </div>
-  </div>
+  </section>
 </main>
 
 <footer class="t-label">
   <span>[EOF]</span>
   <span>© MMXXVI · TYLERCHANCE.INFO</span>
   <span>SET IN JETBRAINS MONO</span>
-  <span class="cursor">█</span>
+  <span class="cursor" aria-hidden="true">█</span>
 </footer>
 
 <script>
-  const beliefs = [
-    { kicker: "Building to empower",       body: "I believe that happy makers make better. Everything I launch, I launch to make their lives better and make it easier to share their creative voice." },
-    { kicker: "Bringing teams together",   body: "I think swarming together beats hand-offs and silos. I love bringing disparate units of a business together to find harmony and efficiency in the ways they work." },
-    { kicker: "Cleaning up clutter",       body: "Efficiency soothes my soul. Few things make me feel better than launching something that cuts out extra work, both for a user and for the back-end." },
-  ];
-
-  const highlights = [
-    { title: "AI in the newsroom",                 body: "Launched article summarization and text-to-speech across Hearst Magazines, and am building an agentic workflow on top of our internal design system so editorial and product teams can ship branded experiences without a front-end hand-off." },
-    { title: "Real-time planning & collaboration", body: "Launched a new in-house content planning platform for The Wall Street Journal, uniting several app-silo'd workflows across a global newsroom into a single real-time tool — first sprint to global launch inside a year." },
-    { title: "Shipping meets audience",            body: "Coded an internal dashboard at Hearst pulling from GitHub, Looker and our own APIs to tie specific feature launches to audience impact — so product and editorial can see, together, which shipped work actually moved the numbers." },
-    { title: "Search & structured data",           body: "Led front-line work on tagging, metadata and structured data for WSJ.com search — and a partnership with Amazon to bring a WSJ internal tool to the public for the 2020 Election, using custom taxonomies and NLP to turn millions of transcripts into a searchable database." },
-  ];
-
-  // ── Live sync clock (America/New_York) ──────────────────────────
-  function pad(n) { return String(n).padStart(2, "0"); }
+  // All page content is now static HTML so crawlers (including AI bots
+  // that don't run JS) can index it. Only the decorative sync clock
+  // needs JS — it's aria-hidden and non-critical.
   function updateClock() {
-    const now = new Date();
-    const ny = new Intl.DateTimeFormat("en-US", {
+    const parts = new Intl.DateTimeFormat("en-US", {
       timeZone: "America/New_York",
       hour12: false,
       hour: "2-digit", minute: "2-digit", second: "2-digit",
       year: "numeric", month: "2-digit", day: "2-digit",
-    }).formatToParts(now).reduce((acc, p) => (acc[p.type] = p.value, acc), {});
-    const hh = ny.hour === "24" ? "00" : ny.hour;
-    document.getElementById("sync-clock").textContent = `${hh}:${ny.minute}:${ny.second}`;
-    document.getElementById("sync-date").textContent  = `${ny.month}/${ny.day}/${ny.year}`;
+    }).formatToParts(new Date()).reduce((acc, p) => (acc[p.type] = p.value, acc), {});
+    const hh = parts.hour === "24" ? "00" : parts.hour;
+    document.getElementById("sync-clock").textContent = `${hh}:${parts.minute}:${parts.second}`;
+    document.getElementById("sync-date").textContent  = `${parts.month}/${parts.day}/${parts.year}`;
   }
   updateClock();
   setInterval(updateClock, 1000);
-
-  // ── Belief ticker (doubled for seamless loop) ───────────────────
-  const track = document.getElementById("ticker-track");
-  const itemsHtml = [...beliefs, ...beliefs].map(b => `
-    <span class="ticker__item">
-      <span class="ticker__bullet">●</span>
-      <span class="ticker__kicker">${b.kicker}</span>
-      <span class="ticker__dash">—</span>
-      <span>${b.body}</span>
-      <span class="ticker__pipe">|</span>
-    </span>
-  `).join("");
-  track.innerHTML = itemsHtml;
-
-  // ── Dispatches ──────────────────────────────────────────────────
-  document.getElementById("dispatches").innerHTML = highlights.map((h, i) => `
-    <div class="dispatch">
-      <div class="dispatch__meta t-label">
-        <span>DISPATCH · ${String(i + 1).padStart(3, "0")}</span>
-        <span class="muted">FILED · 2020—2025</span>
-      </div>
-      <div class="dispatch__title t-display3">${h.title}</div>
-      <div class="dispatch__body t-small">${h.body}</div>
-    </div>
-  `).join("");
-
-  // ── Axioms ──────────────────────────────────────────────────────
-  document.getElementById("axioms").innerHTML = beliefs.map((b, i) => `
-    <div class="axiom">
-      <div class="axiom__num t-label">// axiom.${String(i + 1).padStart(2, "0")}</div>
-      <div class="axiom__kicker t-display3">${b.kicker}.</div>
-      <div class="axiom__body t-small">${b.body}</div>
-    </div>
-  `).join("");
 </script>
 
 </body>

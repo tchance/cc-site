@@ -2,13 +2,150 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Tyler Chance — Résumé</title>
+<title>Résumé — Tyler Chance, VP of Product</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Tyler Chance — Résumé. 16 years across product, web dev, and design in news and publishing." />
+<meta name="description" content="Tyler Chance's résumé: 16 years across product, web development, and design in news and publishing. VP of Product at Hearst Magazines; Product Director at The Wall Street Journal; B.A. from Indiana University School of Journalism." />
+<meta name="author" content="Tyler Chance" />
+<meta name="theme-color" content="#0a0907" />
+
+<link rel="canonical" href="https://www.tylerchance.info/about" />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Tyler Chance" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Résumé — Tyler Chance, VP of Product" />
+<meta property="og:description" content="16 years across product, web development, and design in news and publishing. VP of Product at Hearst Magazines; Product Director at The Wall Street Journal." />
+<meta property="og:url" content="https://www.tylerchance.info/about" />
+<meta property="og:locale" content="en_US" />
+<meta property="profile:first_name" content="Tyler" />
+<meta property="profile:last_name" content="Chance" />
+<meta property="profile:username" content="tchance121" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@tchance121" />
+<meta name="twitter:creator" content="@tchance121" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="print.css" media="print">
+
+<!-- Structured data: Person + WebPage for search engines & LLMs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.tylerchance.info/#person",
+      "name": "Tyler Chance",
+      "givenName": "Tyler",
+      "familyName": "Chance",
+      "alternateName": "Tyler Scott Chance",
+      "url": "https://www.tylerchance.info/",
+      "jobTitle": "Vice President of Product",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Hearst Magazines",
+        "url": "https://www.hearst.com/magazines"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jersey City",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "description": "Product leader and systems thinker building software for content creators and publishers, increasingly with and around AI. 16 years across product, web development, and design in news and publishing.",
+      "sameAs": [
+        "https://www.linkedin.com/in/tylerscottchance/",
+        "https://twitter.com/tchance121"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Indiana University School of Journalism",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Indianapolis",
+            "addressRegion": "IN",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "NewsMediaOrganization",
+          "name": "The Wall Street Journal",
+          "url": "https://www.wsj.com"
+        },
+        {
+          "@type": "Organization",
+          "name": "Gannett Design Studio"
+        },
+        {
+          "@type": "NewsMediaOrganization",
+          "name": "Journal & Courier"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Indiana University Media School"
+        }
+      ],
+      "knowsAbout": [
+        "Product Management",
+        "Product Strategy",
+        "Product Vision",
+        "OKRs",
+        "Roadmapping",
+        "Stakeholder Management",
+        "Team Leadership",
+        "Organizational Design",
+        "Agile",
+        "Scrum",
+        "Continuous Discovery",
+        "User Research",
+        "A/B Testing",
+        "Experimentation",
+        "Google Analytics",
+        "Adobe Analytics",
+        "Looker",
+        "SQL",
+        "Content Management Systems",
+        "Headless CMS",
+        "Content Modeling",
+        "Taxonomies",
+        "Search Engine Optimization",
+        "Audience Development",
+        "Elasticsearch",
+        "Design Systems",
+        "Generative AI",
+        "Large Language Models",
+        "Agentic Workflows",
+        "Prompt Engineering",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "React",
+        "HTML",
+        "CSS",
+        "REST APIs",
+        "GraphQL",
+        "Figma"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.tylerchance.info/about#webpage",
+      "url": "https://www.tylerchance.info/about",
+      "name": "Résumé — Tyler Chance, VP of Product",
+      "description": "Tyler Chance's résumé — 16 years across product, web development, and design in news and publishing.",
+      "about": { "@id": "https://www.tylerchance.info/#person" },
+      "mainEntity": { "@id": "https://www.tylerchance.info/#person" },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
+
 <style>
   :root {
     --bg:        #0a0907;
@@ -47,6 +184,29 @@
   ::selection { background: var(--amber); color: var(--bg); }
   a { transition: color var(--motion-standard); }
   a:hover { color: var(--amber) !important; }
+
+  /* Neutralize default heading/p/list styles — we style via utility classes. */
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; margin: 0; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+
+  /* Screen-reader-only text — indexed by search engines & LLMs, hidden visually. */
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Keyboard focus on interactive expand rows */
+  .expand-row:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+    background: rgba(244,184,96,0.03);
+  }
 
   @keyframes blink  { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
@@ -280,7 +440,7 @@
   .education__loc    { color: var(--ink-mute); }
 
   /* ─── Contact ──────────────────────────────────────── */
-  .contact { padding: 8px 0 16px; }
+  .contact { padding: 8px 0 16px; font-style: normal; /* address elements default to italic */ }
   .contact__prompt { margin: 4px 0; color: var(--ink); }
   .contact__prompt-sym { color: var(--green); user-select: none; margin-right: 4px; }
   .contact__out {
@@ -339,8 +499,8 @@
 </head>
 <body>
 
-<!-- ─── Wire ticker bar ────────────────────────────── -->
-<div class="wire-bar">
+<!-- Wire bar — decorative live clock, hidden from assistive tech & crawlers -->
+<div class="wire-bar" aria-hidden="true">
   <div class="wire-bar__inner t-label">
     <span class="wire-bar__live"><span class="wire-bar__dot"></span>LIVE</span>
     <span>SYNC <span id="sync-clock">00:00:00</span> EDT</span>
@@ -348,104 +508,268 @@
   </div>
 </div>
 
-<!-- ─── Nav ────────────────────────────────────────── -->
-<nav class="nav">
-  <a class="brand t-micro" href="index.html">$ tyler_chance<span class="brand__caret"></span></a>
+<nav class="nav" aria-label="Primary">
+  <a class="brand t-micro" href="/">$ tyler_chance<span class="brand__caret" aria-hidden="true"></span></a>
   <div class="nav__links">
-    <a class="nav__link t-micro" href="index.html">[1] HOME</a>
-    <a class="nav__link t-micro is-active" href="about.html">[2] RÉSUMÉ</a>
-    <a class="nav__link t-micro" href="https://www.linkedin.com/in/tylerscottchance/">LINKEDIN ↗</a>
-    <a class="nav__link t-micro" href="https://twitter.com/tchance121">TWITTER ↗</a>
+    <a class="nav__link t-micro" href="/">[1] HOME</a>
+    <a class="nav__link t-micro is-active" href="/about" aria-current="page">[2] RÉSUMÉ</a>
+    <a class="nav__link t-micro" href="https://www.linkedin.com/in/tylerscottchance/" rel="me">LINKEDIN ↗</a>
+    <a class="nav__link t-micro" href="https://twitter.com/tchance121" rel="me">TWITTER ↗</a>
   </div>
 </nav>
 
 <main>
 
   <!-- ─── About hero ───────────────────────────────── -->
-  <section class="about-hero">
-    <div class="about-hero__label t-label">▸ FILE: RESUME.LOG  ·  16 YEARS  ·  7 ROLES</div>
+  <section class="about-hero" aria-labelledby="resume-heading">
+    <div class="about-hero__label t-label" aria-hidden="true">▸ FILE: RESUME.LOG  ·  16 YEARS  ·  7 ROLES</div>
 
-    <div class="name-block">
-      <div class="name">RÉSUMÉ</div>
-    </div>
+    <h1 class="name-block" id="resume-heading">
+      <span class="name">RÉSUMÉ</span>
+      <span class="visually-hidden"> — Tyler Chance, Vice President of Product at Hearst Magazines</span>
+    </h1>
 
     <div class="about-hero__meta">
-      <div class="about-hero__lede t-display3">
-        <span class="arrow">&gt;</span>
+      <p class="about-hero__lede t-display3">
+        <span class="arrow" aria-hidden="true">&gt;</span>
         A journalism degree, a stint in newsrooms, some years designing pages and <em>&nbsp;many&nbsp;</em> years translating between editors and engineers. Here's the log.
-      </div>
-      <div class="about-hero__data t-label">
+      </p>
+      <div class="about-hero__data t-label" aria-hidden="true">
         <div>OWNER: tyler_chance</div>
         <div>ENCODING: UTF-8</div>
-        <div>ROWS: <span id="row-count">7</span></div>
+        <div>ROWS: 7</div>
         <div class="about-hero__live">● LIVE</div>
       </div>
     </div>
   </section>
 
   <!-- ─── TL;DR bulletin ──────────────────────────── -->
-  <div class="bulletin">
+  <aside class="bulletin" aria-labelledby="tldr-heading">
     <div class="bulletin__head t-label">
-      <span>▸ TL;DR · SPEED-DATING VERSION</span>
+      <h2 id="tldr-heading">▸ TL;DR · Speed-Dating Version</h2>
     </div>
     <div class="bulletin__body t-body">
-      <div class="line"><span class="kicker">PRODUCT.</span> Led several teams, launched &amp; scaled products, managed PMs. Purveyor of empathy at every step.</div>
-      <div class="line"><span class="kicker">WEB DEV.</span> Freelance for years; still building internal tools to solve problems for those around me.</div>
-      <div class="line"><span class="kicker">DESIGN.</span> Designed (and sometimes coded) for the news industry across print and digital.</div>
+      <p class="line"><span class="kicker">PRODUCT.</span> Led several teams, launched &amp; scaled products, managed PMs. Purveyor of empathy at every step.</p>
+      <p class="line"><span class="kicker">WEB DEV.</span> Freelance for years; still building internal tools to solve problems for those around me.</p>
+      <p class="line"><span class="kicker">DESIGN.</span> Designed (and sometimes coded) for the news industry across print and digital.</p>
     </div>
-  </div>
+  </aside>
 
   <!-- ─── §01 Experience ──────────────────────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §01 ]</span>
-    <span class="section-head__title">EXPERIENCE / REVERSE CHRONO</span>
-    <div class="section-head__rule"></div>
-    <span class="section-head__tail t-label"><span id="exp-count">n=7</span></span>
-  </div>
-  <div class="expand-list" id="expand-list"></div>
+  <section aria-labelledby="exp-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §01 ]</span>
+      <h2 class="section-head__title" id="exp-heading">Experience / Reverse Chrono</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
+      <span class="section-head__tail t-label">n=7</span>
+    </div>
+    <div class="expand-list">
+
+      <article class="expand-row" data-interactive="true" data-open="true" role="button" tabindex="0" aria-expanded="true">
+        <div class="expand-row__years t-label"><time datetime="2021">2021</time>–Present</div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">VP, Product</h3>
+          <div class="expand-row__org t-micro">@ Hearst Magazines</div>
+          <p class="expand-row__summary t-small">Oversaw product team structure and strategy across three org restructures, leading teams at both horizontal (discipline) and vertical (vertical) levels.</p>
+          <ul class="expand-row__details t-small">
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>2025–now: VP, Site Experience — leading teams across all Hearst Magazines brands for SEO, audience development, content experience and navigation/wayfinding.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Launched AI-powered article summarization and text-to-speech across the Hearst Magazines portfolio.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Building an agentic workflow on top of our internal design system so product and editorial teams can spin up branded pages and features without a front-end hand-off.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Coded an internal analytics dashboard that pulls from the GitHub, Looker and our internal APIs to tie feature launches to audience impact — so we can see which shipped work actually moved the numbers.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>2023–2025: VP, Enthusiast &amp; Wellness — ran product for the E&amp;W brand vertical. Launched a new Masterclass template, new paywall experiences, and the platform features powering Oprah's Favorite Things.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>2021–2023: VP, Core — ran the Core disciplinary track with Directors and PMs across Content (replatformed the front-end for all Hearst US Magazines sites), Storytelling, CMS (new platform initiative), Search (replatformed to in-house Elasticsearch), and Video (relaunched in-house player).</span></li>
+          </ul>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[−]</span></div>
+      </article>
+
+      <article class="expand-row" data-interactive="true" data-open="false" role="button" tabindex="0" aria-expanded="false">
+        <div class="expand-row__years t-label"><time datetime="2018">2018</time>–<time datetime="2021">2021</time></div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">Product Director</h3>
+          <div class="expand-row__org t-micro">@ The Wall Street Journal</div>
+          <p class="expand-row__summary t-small">Ran the full product lifecycle for WSJ's suite of editorial tools and underlying services — strategy, discovery, ownership, and stakeholder relations across the newsroom and parent companies.</p>
+          <ul class="expand-row__details t-small">
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Led discovery, development and global launch of a new content planning and workflow platform — first sprint to MVP in 4 months, global launch by year-end, unifying workflows previously split across several apps.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Served as WSJ product stakeholder for consumer search — coordinating Dow Jones data teams, newsroom stakeholders, structured-data enhancements, related-article recommendations, and business requirements during a back-end service migration.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Shepherded new additions to the WSJ corpus for search, including interactive graphics and user-focused features like searching on a story's print headline.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Partnered with Amazon to bring a WSJ internal tool to the public for the 2020 Election — used custom taxonomies and NLP to turn millions of transcripts into a searchable database.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Wrote business-logic requirements for internal tools sitting behind Elasticsearch APIs; built Kibana dashboards; stood up new ways of measuring internal processes.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Product Owner for WSJ Newsletters; shepherded the portfolio through a vendor migration.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Recruited and helped establish the first Program Management function for internal editorial publishing systems.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Kicked off a design system to standardize UX and speed up tool construction across every team.</span></li>
+          </ul>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[+]</span></div>
+      </article>
+
+      <article class="expand-row" data-interactive="true" data-open="false" role="button" tabindex="0" aria-expanded="false">
+        <div class="expand-row__years t-label"><time datetime="2016">2016</time>–<time datetime="2018">2018</time></div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">Product Manager</h3>
+          <div class="expand-row__org t-micro">@ The Wall Street Journal</div>
+          <p class="expand-row__summary t-small">First-ever PM for internal editorial tools at WSJ and Dow Jones — working across three legacy engineering teams to rebuild and roll out tools and features in partnership with WSJ consumer product.</p>
+          <ul class="expand-row__details t-small">
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Reinvented and rolled out tools for multimedia search, image cropping, charting across all platforms, live coverage, and content planning.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Ran the Journal's partnership with the Guardian's Mobile Innovation Lab on live-coverage features.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Speaker — SRCCON 2017: "Sure, You're Making Tools, But Do People Use Them?" — on building empathy between newsroom product teams and their users.</span></li>
+          </ul>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[+]</span></div>
+      </article>
+
+      <article class="expand-row" data-interactive="true" data-open="false" role="button" tabindex="0" aria-expanded="false">
+        <div class="expand-row__years t-label"><time datetime="2014">2014</time>–<time datetime="2016">2016</time></div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">Art Director</h3>
+          <div class="expand-row__org t-micro">@ The Wall Street Journal</div>
+          <p class="expand-row__summary t-small">Page design and illustration commissioning for print sections. Built an editorial tool in HTML/CSS/JS with a custom API.</p>
+          <ul class="expand-row__details t-small">
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Served on the prizes committee; built and compiled submission series.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Designed entry and e-book for 2015 Pulitzer Prize winner in Investigative Reporting, "Medicare Unmasked."</span></li>
+          </ul>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[+]</span></div>
+      </article>
+
+      <article class="expand-row" data-interactive="true" data-open="false" role="button" tabindex="0" aria-expanded="false">
+        <div class="expand-row__years t-label"><time datetime="2013">2013</time>–<time datetime="2014">2014</time></div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">Designer</h3>
+          <div class="expand-row__org t-micro">@ Gannett Design Studio</div>
+          <p class="expand-row__summary t-small">Designed A1/News sections for 13 newspapers; built HTML/CSS/JS apps for iPad-only features for the Indianapolis Star.</p>
+          <ul class="expand-row__details t-small">
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Built web tools in HTML/CSS/JS/PHP to scrape APIs and generate URLs for Adobe Digital Publishing Suite.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Animated front pages and infographics with After Effects.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Designed, developed and served as webmaster for the Society of News Design's 2013 conference.</span></li>
+          </ul>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[+]</span></div>
+      </article>
+
+      <article class="expand-row" data-interactive="false" data-open="false">
+        <div class="expand-row__years t-label"><time datetime="2011">2011</time>–<time datetime="2012">2012</time></div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">Professor</h3>
+          <div class="expand-row__org t-micro">@ IU School of Journalism</div>
+          <p class="expand-row__summary t-small">Teaching: Computer Methods in Journalism; Reporting, Writing &amp; Editing I &amp; II.</p>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[·]</span></div>
+      </article>
+
+      <article class="expand-row" data-interactive="true" data-open="false" role="button" tabindex="0" aria-expanded="false">
+        <div class="expand-row__years t-label"><time datetime="2010">2010</time>–<time datetime="2011">2011</time></div>
+        <div class="expand-row__main">
+          <h3 class="expand-row__title t-display3">Copy Editor / Designer</h3>
+          <div class="expand-row__org t-micro">@ Journal &amp; Courier, Lafayette, Ind.</div>
+          <p class="expand-row__summary t-small">Edited copy and laid out daily editions (Local, Wires, A1).</p>
+          <ul class="expand-row__details t-small">
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Trained staff on SEO practices.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Helped assemble social media strategy across Facebook and Twitter.</span></li>
+            <li class="expand-row__detail"><span class="bullet" aria-hidden="true">▸</span><span>Posting content to the web daily.</span></li>
+          </ul>
+        </div>
+        <div class="expand-row__toggle" aria-hidden="true"><span class="expand-row__toggle-pill t-label">[+]</span></div>
+      </article>
+
+    </div>
+  </section>
 
   <!-- ─── §02 Skills ──────────────────────────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §02 ]</span>
-    <span class="section-head__title">SKILLS / GREP</span>
-    <div class="section-head__rule"></div>
-    <span class="section-head__tail t-label"><span id="skill-count">n=0</span></span>
-  </div>
-  <div class="tags" id="skills"></div>
+  <section aria-labelledby="skills-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §02 ]</span>
+      <h2 class="section-head__title" id="skills-heading">Skills / Grep</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
+      <span class="section-head__tail t-label">n=46</span>
+    </div>
+    <ul class="tags">
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>Product Management</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Product Strategy</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Product Vision</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>OKRs</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Roadmapping</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>Stakeholder Management</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Team Leadership</li>
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>Org Design</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Agile</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Scrum</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>Kanban</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Continuous Discovery</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Impact Mapping</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>User Research</li>
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>A/B Testing</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>Experimentation</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>GA4</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Adobe Analytics</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Looker</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Looker Studio</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>Optimizely</li>
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>SQL</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>CMS Architecture</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Headless CMS</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Content Modeling</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>Taxonomies</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>SEO</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Audience Development</li>
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>Elasticsearch</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Design Systems</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>LLM product integration</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>AI-assisted prototyping</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Claude Code</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Agentic workflows</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Prompt engineering</li>
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>JavaScript</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>TypeScript</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Node.js</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>React</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>HTML</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>CSS</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Tailwind</li>
+      <li class="tag" data-accent="green"><span class="tag__chev" aria-hidden="true">›</span>Full-stack development</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>REST &amp; GraphQL APIs</li>
+      <li class="tag" data-accent="amber"><span class="tag__chev" aria-hidden="true">›</span>Figma</li>
+      <li class="tag" data-accent="violet"><span class="tag__chev" aria-hidden="true">›</span>WordPress</li>
+    </ul>
+  </section>
 
   <!-- ─── §03 Education ───────────────────────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §03 ]</span>
-    <span class="section-head__title">EDUCATION</span>
-    <div class="section-head__rule"></div>
-  </div>
-  <div class="education">
-    <div>
-      <div class="education__school t-display3">Indiana University School of Journalism</div>
-      <div class="education__degree t-small">Bachelor of Arts, Journalism</div>
+  <section aria-labelledby="edu-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §03 ]</span>
+      <h2 class="section-head__title" id="edu-heading">Education</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
     </div>
-    <div class="education__loc t-label">📍 Indianapolis, Ind.</div>
-  </div>
+    <div class="education">
+      <div>
+        <h3 class="education__school t-display3">Indiana University School of Journalism</h3>
+        <div class="education__degree t-small">Bachelor of Arts, Journalism</div>
+      </div>
+      <div class="education__loc t-label"><span aria-hidden="true">📍</span> Indianapolis, Ind.</div>
+    </div>
+  </section>
 
   <!-- ─── §04 Contact ─────────────────────────────── -->
-  <div class="section-head t-micro">
-    <span class="t-label">[ §04 ]</span>
-    <span class="section-head__title">CONTACT</span>
-    <div class="section-head__rule"></div>
-    <span class="section-head__tail t-label">/finger</span>
-  </div>
-  <div class="contact t-body">
-    <div class="contact__prompt"><span class="contact__prompt-sym">$</span>finger tyler@tylerchance.info</div>
-    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Login: tyler_chance</div>
-    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Name: Tyler Scott Chance</div>
-    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Location: Jersey City, NJ</div>
-    <div class="contact__out"><span class="contact__out-arrow">&gt;</span>Current: VP, Product @ Hearst Magazines</div>
-    <div class="contact__out" data-color="green"><span class="contact__out-arrow">&gt;</span>Status: ● open to connect with collaborators, advisors, board roles</div>
-    <div class="contact__cta-row">
-      <a class="contact__btn contact__btn--primary t-micro" href="https://www.linkedin.com/in/tylerscottchance/">▸ LINKEDIN ↗</a>
-      <a class="contact__btn t-micro" href="https://twitter.com/tchance121">▸ TWITTER @tchance121 ↗</a>
+  <section aria-labelledby="contact-heading">
+    <div class="section-head t-micro">
+      <span class="t-label">[ §04 ]</span>
+      <h2 class="section-head__title" id="contact-heading">Contact</h2>
+      <div class="section-head__rule" aria-hidden="true"></div>
+      <span class="section-head__tail t-label">/finger</span>
     </div>
-  </div>
+    <address class="contact t-body">
+      <p class="contact__prompt"><span class="contact__prompt-sym" aria-hidden="true">$</span>finger <a href="mailto:tyler@tylerchance.info">tyler@tylerchance.info</a></p>
+      <p class="contact__out"><span class="contact__out-arrow" aria-hidden="true">&gt;</span>Login: tyler_chance</p>
+      <p class="contact__out"><span class="contact__out-arrow" aria-hidden="true">&gt;</span>Name: Tyler Scott Chance</p>
+      <p class="contact__out"><span class="contact__out-arrow" aria-hidden="true">&gt;</span>Location: Jersey City, NJ</p>
+      <p class="contact__out"><span class="contact__out-arrow" aria-hidden="true">&gt;</span>Current: VP, Product @ Hearst Magazines</p>
+      <p class="contact__out" data-color="green"><span class="contact__out-arrow" aria-hidden="true">&gt;</span>Status: ● open to connect with collaborators, advisors, board roles</p>
+      <div class="contact__cta-row">
+        <a class="contact__btn contact__btn--primary t-micro" href="https://www.linkedin.com/in/tylerscottchance/" rel="me">▸ LINKEDIN ↗</a>
+        <a class="contact__btn t-micro" href="https://twitter.com/tchance121" rel="me">▸ TWITTER @tchance121 ↗</a>
+      </div>
+    </address>
+  </section>
 </main>
 
 <footer class="t-label">
@@ -456,115 +780,9 @@
 </footer>
 
 <script>
-  // ── Data ────────────────────────────────────────────────────────
-  const resume = [
-    {
-      years: "2021–Present",
-      title: "VP, Product",
-      org: "Hearst Magazines",
-      summary: "Oversaw product team structure and strategy across three org restructures, leading teams at both horizontal (discipline) and vertical (vertical) levels.",
-      details: [
-        "2025–now: VP, Site Experience — leading teams across all Hearst Magazines brands for SEO, audience development, content experience and navigation/wayfinding.",
-        "Launched AI-powered article summarization and text-to-speech across the Hearst Magazines portfolio.",
-        "Building an agentic workflow on top of our internal design system so product and editorial teams can spin up branded pages and features without a front-end hand-off.",
-        "Coded an internal analytics dashboard that pulls from the GitHub, Looker and our internal APIs to tie feature launches to audience impact — so we can see which shipped work actually moved the numbers.",
-        "2023–2025: VP, Enthusiast & Wellness — ran product for the E&W brand vertical. Launched a new Masterclass template, new paywall experiences, and the platform features powering Oprah's Favorite Things.",
-        "2021–2023: VP, Core — ran the Core disciplinary track with Directors and PMs across Content (replatformed the front-end for all Hearst US Magazines sites), Storytelling, CMS (new platform initiative), Search (replatformed to in-house Elasticsearch), and Video (relaunched in-house player).",
-      ],
-    },
-    {
-      years: "2018–2021",
-      title: "Product Director",
-      org: "The Wall Street Journal",
-      summary: "Ran the full product lifecycle for WSJ's suite of editorial tools and underlying services — strategy, discovery, ownership, and stakeholder relations across the newsroom and parent companies.",
-      details: [
-        "Led discovery, development and global launch of a new content planning and workflow platform — first sprint to MVP in 4 months, global launch by year-end, unifying workflows previously split across several apps.",
-        "Served as WSJ product stakeholder for consumer search — coordinating Dow Jones data teams, newsroom stakeholders, structured-data enhancements, related-article recommendations, and business requirements during a back-end service migration.",
-        "Shepherded new additions to the WSJ corpus for search, including interactive graphics and user-focused features like searching on a story's print headline.",
-        "Partnered with Amazon to bring a WSJ internal tool to the public for the 2020 Election — used custom taxonomies and NLP to turn millions of transcripts into a searchable database.",
-        "Wrote business-logic requirements for internal tools sitting behind Elasticsearch APIs; built Kibana dashboards; stood up new ways of measuring internal processes.",
-        "Product Owner for WSJ Newsletters; shepherded the portfolio through a vendor migration.",
-        "Recruited and helped establish the first Program Management function for internal editorial publishing systems.",
-        "Kicked off a design system to standardize UX and speed up tool construction across every team.",
-      ],
-    },
-    {
-      years: "2016–2018",
-      title: "Product Manager",
-      org: "The Wall Street Journal",
-      summary: "First-ever PM for internal editorial tools at WSJ and Dow Jones — working across three legacy engineering teams to rebuild and roll out tools and features in partnership with WSJ consumer product.",
-      details: [
-        "Reinvented and rolled out tools for multimedia search, image cropping, charting across all platforms, live coverage, and content planning.",
-        "Ran the Journal's partnership with the Guardian's Mobile Innovation Lab on live-coverage features.",
-        "Speaker — SRCCON 2017: \"Sure, You're Making Tools, But Do People Use Them?\" — on building empathy between newsroom product teams and their users.",
-      ],
-    },
-    {
-      years: "2014–2016",
-      title: "Art Director",
-      org: "The Wall Street Journal",
-      summary: "Page design and illustration commissioning for print sections. Built an editorial tool in HTML/CSS/JS with a custom API.",
-      details: [
-        "Served on the prizes committee; built and compiled submission series.",
-        "Designed entry and e-book for 2015 Pulitzer Prize winner in Investigative Reporting, \"Medicare Unmasked.\"",
-      ],
-    },
-    {
-      years: "2013–2014",
-      title: "Designer",
-      org: "Gannett Design Studio",
-      summary: "Designed A1/News sections for 13 newspapers; built HTML/CSS/JS apps for iPad-only features for the Indianapolis Star.",
-      details: [
-        "Built web tools in HTML/CSS/JS/PHP to scrape APIs and generate URLs for Adobe Digital Publishing Suite.",
-        "Animated front pages and infographics with After Effects.",
-        "Designed, developed and served as webmaster for the Society of News Design's 2013 conference.",
-      ],
-    },
-    {
-      years: "2011–2012",
-      title: "Professor",
-      org: "IU School of Journalism",
-      summary: "Teaching: Computer Methods in Journalism; Reporting, Writing & Editing I & II.",
-      details: [],
-    },
-    {
-      years: "2010–2011",
-      title: "Copy Editor / Designer",
-      org: "Journal & Courier, Lafayette, Ind.",
-      summary: "Edited copy and laid out daily editions (Local, Wires, A1).",
-      details: [
-        "Trained staff on SEO practices.",
-        "Helped assemble social media strategy across Facebook and Twitter.",
-        "Posting content to the web daily.",
-      ],
-    },
-  ];
-
-  const skills = [
-    "Product Management", "Product Strategy", "Product Vision",
-    "OKRs", "Roadmapping", "Stakeholder Management",
-    "Team Leadership", "Org Design",
-    "Agile", "Scrum", "Kanban",
-    "Continuous Discovery", "Impact Mapping", "User Research",
-    "A/B Testing", "Experimentation",
-    "GA4", "Adobe Analytics", "Looker", "Looker Studio",
-    "Optimizely", "SQL",
-    "CMS Architecture", "Headless CMS", "Content Modeling",
-    "Taxonomies", "SEO", "Audience Development",
-    "Elasticsearch", "Design Systems",
-    "LLM product integration", "AI-assisted prototyping",
-    "Claude Code", "Agentic workflows", "Prompt engineering",
-    "JavaScript", "TypeScript", "Node.js", "React",
-    "HTML", "CSS", "Tailwind", "Full-stack development",
-    "REST & GraphQL APIs",
-    "Figma",
-    "WordPress",
-  ];
-
-  // ── Counts ──────────────────────────────────────────────────────
-  document.getElementById("row-count").textContent   = resume.length;
-  document.getElementById("exp-count").textContent   = `n=${resume.length}`;
-  document.getElementById("skill-count").textContent = `n=${skills.length}`;
+  // All page content is now static HTML so crawlers (including AI bots
+  // that don't run JS) can index it. JS only handles the live clock
+  // and the expand/collapse behaviour on experience rows.
 
   // ── Live sync clock (America/New_York) ──────────────────────────
   function updateClock() {
@@ -581,61 +799,28 @@
   updateClock();
   setInterval(updateClock, 1000);
 
-  // ── Expand rows ─────────────────────────────────────────────────
-  function escapeHtml(s) {
-    return String(s)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#39;");
-  }
-
-  const list = document.getElementById("expand-list");
-  list.innerHTML = resume.map((r, i) => {
-    const has = r.details && r.details.length > 0;
-    const open = i === 0 && has;
-    const toggleLabel = has ? (open ? "[−]" : "[+]") : "[·]";
-    const detailsHtml = has
-      ? `<div class="expand-row__details t-small">
-           ${r.details.map(d => `
-             <div class="expand-row__detail">
-               <span class="bullet">▸</span>
-               <span>${escapeHtml(d)}</span>
-             </div>`).join("")}
-         </div>`
-      : "";
-    return `
-      <div class="expand-row"
-           data-interactive="${has ? "true" : "false"}"
-           data-open="${open ? "true" : "false"}">
-        <div class="expand-row__years t-label">${escapeHtml(r.years)}</div>
-        <div class="expand-row__main">
-          <div class="expand-row__title t-display3">${escapeHtml(r.title)}</div>
-          <div class="expand-row__org t-micro">@ ${escapeHtml(r.org)}</div>
-          <div class="expand-row__summary t-small">${escapeHtml(r.summary)}</div>
-          ${detailsHtml}
-        </div>
-        <div class="expand-row__toggle">
-          <span class="expand-row__toggle-pill t-label">${toggleLabel}</span>
-        </div>
-      </div>
-    `;
-  }).join("");
-
-  list.addEventListener("click", (e) => {
-    const row = e.target.closest(".expand-row");
-    if (!row || row.dataset.interactive !== "true") return;
+  // ── Expand/collapse rows: mouse + keyboard, aria-expanded sync ──
+  function toggleRow(row) {
     const open = row.dataset.open === "true";
     row.dataset.open = open ? "false" : "true";
-    row.querySelector(".expand-row__toggle-pill").textContent = open ? "[+]" : "[−]";
+    row.setAttribute("aria-expanded", open ? "false" : "true");
+    const pill = row.querySelector(".expand-row__toggle-pill");
+    if (pill) pill.textContent = open ? "[+]" : "[−]";
+  }
+
+  document.addEventListener("click", (e) => {
+    const row = e.target.closest(".expand-row");
+    if (!row || row.dataset.interactive !== "true") return;
+    toggleRow(row);
   });
 
-  // ── Skills ──────────────────────────────────────────────────────
-  document.getElementById("skills").innerHTML = skills.map((sk, i) => {
-    const accent = i % 7 === 0 ? "green" : i % 5 === 0 ? "violet" : "amber";
-    return `<span class="tag" data-accent="${accent}"><span class="tag__chev">›</span>${escapeHtml(sk)}</span>`;
-  }).join("");
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const row = document.activeElement?.closest?.(".expand-row");
+    if (!row || row.dataset.interactive !== "true") return;
+    e.preventDefault();
+    toggleRow(row);
+  });
 </script>
 
 </body>
