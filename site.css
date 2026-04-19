@@ -43,7 +43,7 @@ body {
   background-image: repeating-linear-gradient(0deg, rgba(244,184,96,0.015) 0 1px, transparent 1px 3px);
 }
 ::selection { background: var(--amber); color: var(--bg); }
-a { transition: color var(--motion-standard); }
+a { color: inherit; transition: color var(--motion-standard); }
 a:hover { color: var(--amber) !important; }
 
 /* We style text via utility classes, not browser defaults. */
