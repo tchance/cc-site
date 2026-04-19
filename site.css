@@ -1,0 +1,482 @@
+/* =========================================================================
+   tylerchance.info — shared stylesheet
+   -------------------------------------------------------------------------
+   Loaded by every page. Screen styles only; print rules live in print.css.
+   Per-page differences (hero animation timing, active nav state) are driven
+   by a data-page attribute on <body>.
+   ========================================================================= */
+
+/* ─── Tokens ────────────────────────────────────────────────────────────── */
+:root {
+  --bg:        #0a0907;
+  --bg-raised: #141107;
+  --bg-panel:  #1a1610;
+  --ink:       #e8dfc4;
+  --ink-dim:   #b5a888;
+  --ink-mute:  #8a7a55;
+  --ink-faint: #5a4f36;
+  --ink-ghost: #3a3425;
+  --amber:     #f4b860;
+  --green:     #7fb069;
+  --red:       #d4614a;
+  --violet:    #a88bc8;
+
+  --mono: "JetBrains Mono", "IBM Plex Mono", "Fira Code", ui-monospace, Menlo, monospace;
+
+  --rule-dashed: 1px dashed var(--ink-faint);
+  --rule-dotted: 1px dotted var(--ink-ghost);
+  --rule-solid:  1px solid  var(--ink-faint);
+
+  --motion-standard: 220ms cubic-bezier(0.2,0,0,1);
+
+  --container-max: 1440px;
+  --gutter: 48px;
+}
+
+/* ─── Base reset ────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); overscroll-behavior: none; }
+body {
+  font-family: var(--mono);
+  color: var(--ink);
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(0deg, rgba(244,184,96,0.015) 0 1px, transparent 1px 3px);
+}
+::selection { background: var(--amber); color: var(--bg); }
+a { transition: color var(--motion-standard); }
+a:hover { color: var(--amber) !important; }
+
+/* We style text via utility classes, not browser defaults. */
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; margin: 0; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+/* Screen-reader-only text — indexed by engines & LLMs, hidden visually. */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Animations ────────────────────────────────────────────────────────── */
+@keyframes blink  { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ─── Typography utilities ──────────────────────────────────────────────── */
+.t-label    { font-size: 10px;   line-height: 1.3;  font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; }
+.t-micro    { font-size: 11px;   line-height: 1.4;  font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+.t-small    { font-size: 12.5px; line-height: 1.55; font-weight: 400; }
+.t-body     { font-size: 14px;   line-height: 1.6;  font-weight: 400; }
+.t-lede     { font-size: 18px;   line-height: 1.5;  font-weight: 400; }
+.t-display3 { font-size: 24px;   line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; }
+
+/* ─── Chrome ────────────────────────────────────────────────────────────── */
+/* Wire bar — sticky decorative clock strip at the top of every page */
+.wire-bar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg);
+  border-bottom: var(--rule-dashed);
+}
+.wire-bar__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 8px var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink-mute);
+}
+.wire-bar__live { color: var(--green); display: inline-flex; align-items: center; gap: 8px; }
+.wire-bar__dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 1.2s steps(2) infinite; }
+
+/* Primary nav */
+.nav {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 20px var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--rule-solid);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand { color: var(--amber); text-decoration: none; }
+.brand__caret {
+  display: inline-block;
+  margin-left: 2px;
+  background: var(--amber);
+  width: 8px; height: 14px;
+  vertical-align: -2px;
+  animation: blink 1s steps(2) infinite;
+}
+.nav__links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav__link {
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  transition: all var(--motion-standard);
+}
+.nav__link.is-active { color: var(--amber); border-color: var(--amber); }
+.nav__link.is-active::before { content: "▸"; margin-right: 6px; }
+
+/* Main container */
+main {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Footer */
+footer {
+  max-width: var(--container-max);
+  margin: 120px auto 0;
+  padding: 24px var(--gutter) 40px;
+  border-top: var(--rule-dashed);
+  display: flex;
+  justify-content: space-between;
+  color: var(--ink-mute);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+footer .cursor { color: var(--green); }
+
+/* ─── Masthead name-block (shared between home and about) ───────────────── */
+.name-block {
+  --name-size: clamp(72px, 22vw, 360px);
+  padding-top: calc(var(--name-size) * 0.15); /* headroom for accented caps */
+  opacity: 0;
+  animation: fadeIn 500ms 200ms both; /* about uses 200ms; home overrides below */
+}
+body[data-page="home"] .name-block { animation-delay: 800ms; }
+
+.name {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: var(--name-size);
+  letter-spacing: -0.07em;
+  line-height: 0.82;
+  color: var(--amber);
+  margin: 0;
+  text-align: left;
+  user-select: all;
+  white-space: nowrap;
+  transform: scaleX(1.04);
+  transform-origin: left center;
+  text-shadow: 0 0 1px var(--amber), 0 0 32px rgba(244,184,96,0.18);
+}
+
+/* ─── Home hero ─────────────────────────────────────────────────────────── */
+.hero { padding: 48px 0 16px; }
+
+.boot { margin-bottom: 32px; }
+.boot__line { opacity: 0; animation: fadeIn 400ms both; }
+.boot__line--cmd { color: var(--green); }
+.boot__line--out { color: var(--ink-dim); }
+.boot__line:nth-child(1) { animation-delay: 0ms; }
+.boot__line:nth-child(2) { animation-delay: 180ms; }
+.boot__line:nth-child(3) { animation-delay: 360ms; }
+.boot__line:nth-child(4) { animation-delay: 540ms; }
+
+.tagline-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: end;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  border-top: var(--rule-dashed);
+  padding-top: 20px;
+  opacity: 0;
+  animation: fadeIn 500ms 1200ms both;
+}
+.tagline { color: var(--ink); max-width: 780px; }
+.tagline__arrow { color: var(--green); }
+.tagline__caret {
+  display: inline-block;
+  background: var(--amber);
+  width: 12px; height: 20px;
+  margin-left: 8px;
+  vertical-align: -2px;
+  animation: blink 1s steps(2) infinite;
+}
+.coords { text-align: right; color: var(--ink-mute); line-height: 1.6; }
+.coords__status { color: var(--green); margin-top: 8px; }
+
+/* Belief ticker (home only) */
+.ticker {
+  margin-top: 48px;
+  overflow: hidden;
+  border-top: var(--rule-dashed);
+  border-bottom: var(--rule-dashed);
+  padding: 12px 0;
+  color: var(--ink-dim);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+}
+.ticker__track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 45s linear infinite;
+  gap: 48px;
+}
+.ticker__item   { display: inline-flex; align-items: center; gap: 12px; }
+.ticker__bullet { color: var(--amber); }
+.ticker__kicker { color: var(--amber); font-weight: 600; text-transform: uppercase; }
+.ticker__dash   { color: var(--ink-mute); }
+.ticker__pipe   { color: var(--ink-faint); margin-left: 12px; }
+
+/* ─── About hero ────────────────────────────────────────────────────────── */
+.about-hero { padding: 48px 0 0; }
+.about-hero__label { color: var(--amber); margin-bottom: 20px; }
+.about-hero__meta {
+  border-top: var(--rule-dashed);
+  margin-top: 16px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  opacity: 0;
+  animation: fadeIn 500ms 600ms both;
+}
+.about-hero__lede { color: var(--ink); }
+.about-hero__lede .arrow { color: var(--green); }
+.about-hero__lede em { font-style: italic; }
+.about-hero__data { color: var(--ink-mute); text-align: right; line-height: 1.8; }
+.about-hero__live { color: var(--green); margin-top: 10px; }
+
+/* ─── Section headers ───────────────────────────────────────────────────── */
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 48px 0 16px;
+  color: var(--amber);
+}
+.section-head__title {
+  color: var(--ink);
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.section-head__rule { flex: 1; border-top: var(--rule-dashed); }
+.section-head__tail { color: var(--ink-mute); }
+.section-head > .t-label { white-space: nowrap; flex-shrink: 0; }
+
+/* ─── Dispatches grid (home) ────────────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.dispatch {
+  display: block;
+  border: 1px solid var(--ink-faint);
+  padding: 24px 28px;
+  background: var(--bg-raised);
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--motion-standard), border-color var(--motion-standard);
+}
+.dispatch:hover {
+  background: var(--bg-panel);
+  border-color: var(--amber);
+  color: inherit !important;
+}
+.dispatch__meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.dispatch__meta .muted { color: var(--ink-mute); }
+.dispatch__title { color: var(--ink); margin-bottom: 12px; }
+.dispatch__body  { color: var(--ink-dim); }
+
+/* ─── Axioms grid (home) ────────────────────────────────────────────────── */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.axiom {
+  border: 1px solid var(--ink-faint);
+  border-top: 3px solid var(--amber);
+  padding: 20px 22px;
+  background: var(--bg-panel);
+}
+.axiom__num    { color: var(--green); margin-bottom: 10px; }
+.axiom__kicker { color: var(--amber); margin-bottom: 10px; }
+.axiom__body   { color: var(--ink-dim); }
+
+/* ─── CTA (home) ────────────────────────────────────────────────────────── */
+.cta { color: var(--ink); padding: 16px 0 32px; }
+.cta__prompt { margin: 4px 0; }
+.cta__prompt-sym { color: var(--green); user-select: none; }
+.cta__prompt-note { color: var(--ink-mute); }
+.cta__row { margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap; }
+.cta__btn {
+  padding: 12px 20px;
+  border: 1px solid var(--ink-faint);
+  color: var(--ink);
+  text-decoration: none;
+}
+.cta__btn--primary { border-color: var(--amber); color: var(--amber); }
+
+/* ─── Bulletin (about TL;DR) ────────────────────────────────────────────── */
+.bulletin {
+  border: 1px solid var(--ink-faint);
+  border-left: 3px solid var(--amber);
+  background: var(--bg-panel);
+  padding: 20px 24px;
+  margin-top: 48px;
+}
+.bulletin__head {
+  display: flex; justify-content: space-between;
+  color: var(--amber);
+  margin-bottom: 10px;
+}
+.bulletin__body .line { margin-bottom: 8px; }
+.bulletin__body .line:last-child { margin-bottom: 0; }
+.bulletin__body .kicker { color: var(--amber); font-weight: 600; }
+
+/* ─── Expand rows (about experience) ────────────────────────────────────── */
+.expand-list { border-top: var(--rule-dashed); }
+.expand-row {
+  border-bottom: var(--rule-dotted);
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: 140px 1fr 60px;
+  gap: 20px;
+  cursor: pointer;
+  transition: background var(--motion-standard);
+}
+.expand-row:hover { background: rgba(244,184,96,0.03); }
+.expand-row:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  background: rgba(244,184,96,0.03);
+}
+.expand-row[data-interactive="false"]        { cursor: default; }
+.expand-row[data-interactive="false"]:hover  { background: transparent; }
+.expand-row__years    { color: var(--amber); padding-top: 6px; }
+.expand-row__title    { color: var(--ink); margin-bottom: 2px; }
+.expand-row__org      { color: var(--ink-mute); }
+.expand-row__summary  { color: var(--ink-dim); margin-top: 10px; }
+.expand-row__details {
+  display: none;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: var(--rule-dotted);
+}
+.expand-row[data-open="true"] .expand-row__details { display: block; }
+.expand-row__detail {
+  color: var(--ink);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+}
+.expand-row__detail:last-child      { margin-bottom: 0; }
+.expand-row__detail .bullet         { color: var(--green); flex-shrink: 0; }
+.expand-row__toggle                 { text-align: right; padding-top: 4px; }
+.expand-row__toggle-pill {
+  color: var(--amber);
+  border: 1px solid var(--ink-faint);
+  padding: 2px 8px;
+}
+.expand-row[data-open="true"] .expand-row__toggle-pill {
+  color: var(--green);
+  border-color: var(--green);
+}
+.expand-row[data-interactive="false"] .expand-row__toggle-pill {
+  color: var(--ink-ghost);
+  border-color: transparent;
+}
+
+/* ─── Skills tags (about) ───────────────────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0 24px;
+}
+.tag {
+  border: 1px solid var(--ink-faint);
+  padding: 3px 9px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg-raised);
+  display: inline-block;
+}
+.tag__chev                           { margin-right: 6px; color: var(--amber); }
+.tag[data-accent="green"] .tag__chev { color: var(--green); }
+.tag[data-accent="violet"] .tag__chev { color: var(--violet); }
+
+/* ─── Education (about) ─────────────────────────────────────────────────── */
+.education {
+  border: 1px solid var(--ink-faint);
+  padding: 24px 28px;
+  background: var(--bg-raised);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+.education__school { color: var(--ink); margin-bottom: 4px; }
+.education__degree { color: var(--ink-dim); }
+.education__loc    { color: var(--ink-mute); }
+
+/* ─── Contact (about) ───────────────────────────────────────────────────── */
+.contact { padding: 8px 0 16px; font-style: normal; /* address elements default to italic */ }
+.contact__prompt      { margin: 4px 0; color: var(--ink); }
+.contact__prompt-sym  { color: var(--green); user-select: none; margin-right: 4px; }
+.contact__out         { color: var(--ink-dim); padding-left: 16px; margin: 2px 0; }
+.contact__out[data-color="green"] { color: var(--green); }
+.contact__out-arrow   { color: var(--ink-faint); margin-right: 8px; }
+.contact__cta-row     { margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap; }
+.contact__btn {
+  padding: 12px 20px;
+  border: 1px solid var(--ink-faint);
+  color: var(--ink);
+  text-decoration: none;
+}
+.contact__btn--primary { border-color: var(--amber); color: var(--amber); }
+
+/* ─── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  :root { --gutter: 24px; }
+  .grid-2, .grid-3    { grid-template-columns: 1fr; }
+  .tagline-row        { grid-template-columns: 1fr; }
+  .coords             { text-align: left; }
+  .about-hero__meta   { grid-template-columns: 1fr; }
+  .about-hero__data   { text-align: left; }
+  .expand-row         { grid-template-columns: 100px 1fr 44px; gap: 12px; }
+  .education          { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .wire-bar__inner    { gap: 12px; flex-wrap: wrap; justify-content: flex-start; }
+  .nav                { padding: 16px var(--gutter); }
+  .section-head       { gap: 10px; padding: 32px 0 12px; }
+  .section-head__rule { display: none; }
+  .section-head__tail { margin-left: auto; }
+  .section-head__title { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot__line,
+  .name-block,
+  .tagline-row,
+  .about-hero__meta { opacity: 1; animation: none; }
+  .ticker__track    { animation: none; }
+  .wire-bar__dot,
+  .brand__caret,
+  .tagline__caret   { animation: none; }
+}

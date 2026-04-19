@@ -5,5 +5,3 @@ desktop.ini
 .vscode/
 .idea/
 
-# Original Claude Design handoff bundle (reference material, not site source)
-_design_source/
