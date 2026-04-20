@@ -468,6 +468,20 @@ body[data-page="home"] .name-block { animation-delay: 800ms; }
   .section-head__rule { display: none; }
   .section-head__tail { margin-left: auto; }
   .section-head__title { font-size: 13px; }
+
+  /* Résumé rows: stack years on top, toggle top-right, content full width.
+     The desktop 3-col grid wastes horizontal space at phone widths. */
+  .expand-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "years toggle"
+      "main  main";
+    gap: 6px 12px;
+    align-items: center;
+  }
+  .expand-row__years  { grid-area: years;  padding-top: 0; }
+  .expand-row__main   { grid-area: main; }
+  .expand-row__toggle { grid-area: toggle; padding-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
